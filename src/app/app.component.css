@@ -1,0 +1,29 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(to right, red, blue);
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    font-family: 'Your Cool Font', sans-serif; /* Specify your font */
+    color: white;
+  }
+  
+  .nav-links {
+    display: flex;
+    gap: 1.5rem; /* Spacing between links */
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .nav-links a:hover {
+    text-decoration: underline; /* Optional hover effect */
+  }
+  

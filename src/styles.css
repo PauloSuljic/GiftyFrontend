@@ -1,1 +1,39 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(to right, red, blue);
+    font-family: Arial, sans-serif;
+    color: white;
+}
+  
+.login-container {
+    text-align: center; /* Center content in the container */
+    color: white; /* Text color for visibility */
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent background for contrast */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+  
+input {
+    display: block;
+    margin: 10px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+button:hover {
+    background-color: lightgray;
+}

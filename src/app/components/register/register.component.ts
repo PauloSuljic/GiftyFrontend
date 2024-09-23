@@ -18,6 +18,6 @@ export class RegisterComponent {
 
   onRegister() {
     console.log("User trying to register with email: ", this.email);
-    this.router.navigate(['/dashboard']);
+    this.router.navigate(['/home']);
   }
 }
