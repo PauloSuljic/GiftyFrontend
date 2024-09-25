@@ -1,12 +1,2 @@
-<nav class="navbar">
-  <div class="logo">
-    <span class="logo-text">Gifty</span>
-  </div>
-  <div class="nav-links">
-    <a routerLink="/about">About</a>
-    <a routerLink="/login" *ngIf="!isLoggedIn()">Login</a>
-    <a routerLink="/register" *ngIf="!isLoggedIn()">Sign Up</a>
-    <a (click)="logout()" *ngIf="isLoggedIn()">Logout</a>
-  </div>
-</nav>
+<app-navbar></app-navbar>
 <router-outlet></router-outlet>

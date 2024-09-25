@@ -1,10 +1,12 @@
 import { Component } from '@angular/core';
-import { CalendarComponent } from '../calendar/calendar.component';
+import { MiniDashboardComponent } from '../mini-dashboard/mini-dashboard.component';
+import { RemindersComponent } from '../reminders/reminders.component';
+import { MiniCalendarComponent } from '../mini-calendar/mini-calendar.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CalendarComponent],
+  imports: [MiniDashboardComponent, RemindersComponent, MiniCalendarComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })

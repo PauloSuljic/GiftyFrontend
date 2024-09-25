@@ -1,0 +1,27 @@
+.home-container {
+    display: flex;
+    justify-content: space-between; /* Ensure space between the two containers */
+    align-items: stretch; /* Make sure both children stretch to the same height */
+    gap: 20px; /* Optional: Add space between the dashboard and reminders */
+    height: 100%; /* Set height for the home container */
+}
+
+.mini-dashboard {
+    flex:  5; /* Take up half of the available space */
+    padding: 20px; /* Add some padding */
+}
+
+.reminders {
+    flex: 4; /* Take up half of the available space */
+    display: flex; /* Use flexbox for inner layout */
+    flex-direction: column; /* Stack reminders and calendar vertically */
+    padding: 20px; /* Add some padding */
+}
+
+.app-reminders {
+    flex: 1; /* Take up available space for reminders */
+}
+
+.app-mini-calendar {
+    flex: 1; /* Take up available space for calendar */
+}

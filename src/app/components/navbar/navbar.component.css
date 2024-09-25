@@ -1,0 +1,140 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background: linear-gradient(to right, red, blue);
+    position: relative;
+  }
+  
+  .logo {
+    font-size: 1.5rem;
+    color: white;
+  }
+  
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    cursor: pointer;
+  }
+  
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .user-profile {
+    position: relative; /* Position for dropdown */
+  }
+  
+  .user-profile img {
+    width: 40px; /* Adjust size as needed */
+    height: 40px;
+    border-radius: 50%; /* Make it circular */
+  }
+  
+  .user-dropdown, .notification-dropdown, .friends-dropdown { /* Add .friends-dropdown styling */
+    display: none; /* Initially hidden */
+    position: absolute;
+    right: 0; /* Align with the user profile */
+    background-color: white; /* Background for dropdown */
+    color: black;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 5px; /* Space from the icon */
+  }
+  
+  .user-dropdown ul, .notification-dropdown ul, .friends-dropdown ul { /* Add .friends-dropdown list styling */
+    list-style-type: none; /* Remove bullet points */
+    padding: 10px; /* Padding for dropdown items */
+    margin: 0;
+  }
+  
+  .user-dropdown li, .notification-dropdown li, .friends-dropdown li { /* Add .friends-dropdown list item styling */
+    padding: 10px; /* Padding for each dropdown item */
+    cursor: pointer;
+  }
+  
+  .user-dropdown li:hover, .notification-dropdown li:hover, .friends-dropdown li:hover { /* Add .friends-dropdown hover effect */
+    background-color: rgba(0, 0, 0, 0.1); /* Highlight on hover */
+  }
+  
+  .icon-friends, .icon-bell {
+    font-size: 24px; /* Adjust size as needed */
+    color: white; /* Icon color */
+    cursor: pointer;
+  }
+  
+  /* Show dropdown when visible */
+  .user-dropdown.show, .notification-dropdown.show, .friends-dropdown.show { /* Show friends dropdown */
+    display: block; /* Show dropdown */
+  }
+  
+  .notification-container, .friends-container { /* Position relative for both dropdowns */
+    position: relative;
+  }
+  
+  .notification-dropdown, .friends-dropdown { /* Position absolute for both dropdowns */
+    position: absolute;
+    top: 100%; /* Position below the icon */
+    right: 0; /* Align to the right */
+    background-color: white; /* Dropdown background */
+    border: 1px solid #ccc; /* Border for dropdown */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); /* Shadow for dropdown */
+    z-index: 1000; /* Ensure dropdown appears above other elements */
+    width: 200px; /* Width of dropdown */
+    max-height: 300px; /* Max height of dropdown */
+    overflow-y: auto; /* Scrollbar if content overflows */
+  }
+  
+  .notification-dropdown ul, .friends-dropdown ul { /* Remove bullet points and padding for both */
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+  }
+  
+  .notification-dropdown li, .friends-dropdown li { /* Padding for each notification and friend item */
+    padding: 10px; /* Padding for each notification item */
+  }
+  
+  .notification-dropdown li:hover, .friends-dropdown li:hover { /* Highlight on hover for both */
+    background-color: #f0f0f0; /* Highlight on hover */
+  }
+  
+  @font-face {
+    font-family: 'TuallyRegular';
+    src: url('../../../../public/assets/fonts/TuallyRegular.otf') format('opentype'); /* Correct the path and specify 'opentype' */
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  .logo-text {
+    font-family: 'TuallyRegular'; /* Fallback to a default font in case the custom font fails */
+    font-size: 3rem; /* Adjust size as necessary */
+    color: white; /* Adjust color if needed */
+  }
+  
+  .user-dropdown, .notification-dropdown, .friends-dropdown { 
+    display: none; /* Initially hidden */
+    position: absolute;
+    right: 0; /* Align with the user profile */
+    background-color: white; /* Background for dropdown */
+    color: black;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 5px; /* Space from the icon */
+  }
+  
+  .user-dropdown.show, .notification-dropdown.show, .friends-dropdown.show { /* Show friends dropdown */
+    display: block; /* Show dropdown */
+  }
+  
+  .notification-container, .friends-container { 
+    position: relative; /* Position relative for absolute dropdown positioning */
+  }
+  

@@ -1,0 +1,128 @@
+.friends-page-container {
+    display: flex;
+  }
+  
+  .friends {
+    flex: 3; /* Take up half of the available space */
+    margin: 40px; /* Center horizontally with margin */
+    text-align: center; /* Center content inside the box */
+    color: white; /* Change text color to ensure visibility */
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: left;
+  }
+  
+  .reminders {
+    flex: 1; /* Take up a smaller portion of the available space */
+    display: flex; /* Use flexbox for inner layout */
+    flex-direction: column; /* Stack reminders and calendar vertically */
+    padding: 20px; /* Add some padding */
+  }
+  
+  .title-label {
+    font-size: 34px;
+    padding-top: 10px;
+  }
+  
+  /* Search bar styling */
+  .search-bar {
+    width: 100%; /* Stretch the search bar across the available space */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  
+  /* Friends list container */
+  .friends-list {
+    text-align: center;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(6, 1fr); /* 4 cards per row */
+  }
+  
+  /* Individual friend card */
+  .friend-card {
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: rgba(250, 250, 250, 0.3);
+    transition: background-color 0.3s ease;
+    gap: 5px;
+  }
+  
+  .friend-card:hover {
+    background-color: rgba(250, 250, 250, 0.2); /* Hover effect */
+  }
+  
+  /* Friend image */
+  .friend-image {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Circular image */
+    object-fit: cover;
+    margin-top: 15px;
+  }
+  
+  /* Friend information */
+
+  .friend-name {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+.divider {
+    border: 0; /* Remove default border */
+    border-top: 1px solid #ccc; /* Add thin top border */
+    margin: 10px 0; /* Space around the line */
+    opacity: 0.8;
+}
+  
+  /* Container for the search bar with magnifier icon */
+.search-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    max-width: 300px; /* Adjust width as needed */
+    margin-bottom: 20px; /* Optional: add space below the search bar */
+}
+
+/* Magnifier icon styling */
+.search-icon {
+    font-size: 20px; /* Size of the magnifier icon */
+    padding-bottom: 10px;
+    color: #888; /* Color of the magnifier icon */
+    position: absolute; /* Position relative to the container */
+    left: 10px; /* Adjust spacing from the left */
+    pointer-events: none; /* Prevent the icon from blocking clicks */
+}
+
+/* Styling the search bar */
+.search-bar {
+    padding: 10px 10px 10px 35px; /* Add padding to the left for icon */
+    font-size: 16px; /* Adjust font size */
+    border: 1px solid #ccc; /* Border styling */
+    border-radius: 20px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding in width */
+    outline: none; /* Remove outline on focus */
+    transition: border-color 0.3s ease; /* Smooth border transition */
+}
+
+/* Optional: Change border color on focus */
+.search-bar:focus {
+    border-color: #007BFF; /* Change border color on focus */
+}
+
+.user-info {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 10px; /* Space below user info */
+}
