@@ -1,0 +1,37 @@
+<nav class="navbar">
+  <div class="logo">
+    <a routerLink="/home" class="logo-text">Gifty</a>
+  </div>
+  <div class="nav-links">
+    <!-- Friends Dropdown Container -->
+    <div class="friends-container" *ngIf="isLoggedIn()">
+      <span class="material-icons" (click)="toggleFriends()">people</span> <!-- Friends icon -->
+      <div class="friends-dropdown" [ngClass]="{'show': friendsVisible}"> <!-- Friends dropdown -->
+        <ul>
+          <li *ngFor="let friend of friendsList">{{ friend }}</li>
+        </ul>
+      </div>
+    </div>
+    <!-- Notification Dropdown Container -->
+    <div class="notification-container" *ngIf="isLoggedIn()">
+      <span class="material-icons" (click)="toggleNotifications()">notifications</span> <!-- Bell icon -->
+      <div class="notification-dropdown" [ngClass]="{'show': notificationsVisible}">
+        <ul>
+          <li *ngFor="let notification of notifications">{{ notification }}</li>
+        </ul>
+      </div>
+    </div>
+    <a routerLink="/about" *ngIf="!isLoggedIn()">About</a>
+    <a routerLink="/login" *ngIf="!isLoggedIn()">Login</a>
+    <a routerLink="/register" *ngIf="!isLoggedIn()">Sign Up</a>
+    <div class="user-profile" *ngIf="isLoggedIn()">
+      <img src="https://cdn.pixabay.com/photo/2012/04/13/21/07/user-33638_1280.png" alt="User Profile" (click)="toggleDropdown()" />
+      <div class="user-dropdown" [ngClass]="{'show': dropdownVisible}">
+        <ul>
+          <li routerLink="/settings">Settings</li>
+          <li (click)="logout()">Logout</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</nav>

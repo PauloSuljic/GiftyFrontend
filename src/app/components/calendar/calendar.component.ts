@@ -1,17 +1,17 @@
-import { NgFor } from '@angular/common';
 import { Component } from '@angular/core';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-calendar',
-  templateUrl: './calendar.component.html',
   standalone: true,
-  imports: [NgFor],
-  styleUrls: ['./calendar.component.css']
+  imports: [],
+  templateUrl: './calendar.component.html',
+  styleUrl: './calendar.component.css'
 })
 export class CalendarComponent {
-  friendsBirthdays = [
-    { name: 'Alice', date: '2024-09-24' },
-    { name: 'Bob', date: '2024-10-05' }
-  ];
+  constructor(private router: Router) {}
+
+  navigateToCalendar() {
+    this.router.navigate(['/calendar']); // Redirect to My Gifty Page
+  }
 }

@@ -1,33 +1,23 @@
 body {
     margin: 0;
     height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(to right, red, blue);
     font-family: Arial, sans-serif;
     color: white;
-}
-  
-.login-container {
-    text-align: center; /* Center content in the container */
-    color: white; /* Text color for visibility */
-    background: rgba(0, 0, 0, 0.3); /* Semi-transparent background for contrast */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+    background: linear-gradient(to right, red, blue);
 }
   
 input {
-    display: block;
-    margin: 10px auto;
-    padding: 10px;
+    width: calc(100% - 40px); /* Full width minus padding from the container */
+    padding: 10px; /* Internal padding */
+    margin: 10px 0; /* Space between inputs */
     border: none;
     border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding is part of the width */
 }
 
 button {
-    padding: 10px 20px;
+    margin: 20px 0px 10px 0px;
+    padding: 10px 30px;
     border: none;
     border-radius: 5px;
     background-color: white;
@@ -37,3 +27,5 @@ button {
 button:hover {
     background-color: lightgray;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -1,0 +1,13 @@
+/* General styling for reminders and calendar containers */
+.reminders-container {
+    display: flex;
+    flex-direction: column; /* Stack Reminders and Calendar vertically */
+    margin: 20px auto;
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: white;
+    margin-bottom: 20px; /* Add space between Reminders and Calendar */
+  }

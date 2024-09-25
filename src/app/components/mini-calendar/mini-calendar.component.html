@@ -1,0 +1,9 @@
+<div class="mini-calendar-container">
+  <mat-calendar 
+    [dateClass]="dateClass"
+    [(selected)]="selected" 
+    [startView]="'month'" >
+  </mat-calendar>
+  <p>Selected date: {{selected()}}
+  </p>
+</div>
