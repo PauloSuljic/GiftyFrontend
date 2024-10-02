@@ -1,40 +1,43 @@
 <div class="my-gifty-page-container">
     <div class="wishlist">
-        <div class="user-info">
-            <img src="https://cdn.pixabay.com/photo/2012/04/13/21/07/user-33638_1280.png" alt="User Image" class="user-image" /> <!-- Replace with dynamic user image -->
-            <div class="user-details">
-                <p style="color: white;">{{ loggedInUserName }}'s Wishlists</p> <!-- Replace with dynamic user name -->
-            </div>
+      <div class="user-info">
+        <img src="https://cdn.pixabay.com/photo/2012/04/13/21/07/user-33638_1280.png" alt="User Image" class="user-image" />
+        <div class="user-details">
+          <p style="color: white;">{{ loggedInUserName }}'s Wishlists</p>
         </div>
-        
-        <!-- Separator Line -->
-        <hr class="divider" />
-        <div class="wishlist-container">
-            <div 
-                class="wishlist-card add-wishlist" 
-                (click)="canAddNewWishlist() && newWishlistName = ''" 
-                *ngIf="canAddNewWishlist()">
-                <span class="material-icons">add</span>
-                <input 
-                *ngIf="canAddNewWishlist()" 
-                type="text" 
-                [(ngModel)]="newWishlistName" 
-                placeholder="Enter wishlist name" 
-                (keyup.enter)="addWishlist()"
-                />
-            </div>
-            <div 
-                *ngFor="let wishlist of wishlists" 
-                class="wishlist-card"
-            >
+      </div>
+  
+      <!-- Separator Line -->
+      <hr class="divider" />
+  
+      <!-- Wishlist Container -->
+      <div class="wishlist-container">
+        <!-- Add Wishlist Card -->
+        <div 
+          class="wishlist-card add-wishlist" 
+          (click)="canAddNewWishlist() && newWishlist.title = ''" 
+          *ngIf="canAddNewWishlist()">
+          <span class="material-icons">add</span>
+          <input 
+            *ngIf="canAddNewWishlist()" 
+            type="text" 
+            [(ngModel)]="newWishlist.title" 
+            placeholder="Enter wishlist name" 
+            (keyup.enter)="addWishlist()" 
+          />
+        </div>
+            <!-- Wishlist Cards with Trash Icon -->
+            <div *ngFor="let wishlist of wishlists" class="wishlist-card" (click)="navigateToWishlist(wishlist)">
                 <span class="material-icons gift-icon">card_giftcard</span>
-                <p>{{ wishlist.name }}</p>
+                <p>{{ wishlist.title }}</p>
             </div>
-        </div>
+      </div>
     </div>
+  
     <div class="reminders">
-      <app-reminders></app-reminders>
-      <app-mini-calendar></app-mini-calendar>
+        <app-reminders></app-reminders>
+        <app-mini-calendar></app-mini-calendar>
     </div>
-  </div>
+ 
+</div>
   

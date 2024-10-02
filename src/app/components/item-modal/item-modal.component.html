@@ -1,0 +1,33 @@
+<!-- Edit/Delete Wishlist Item Modal -->
+<div class="modal-overlay" (click)="onClose()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <h4>Edit Wishlist Item</h4>
+  
+      <div>
+        <label for="itemName">Name:</label>
+        <input id="itemName" [(ngModel)]="editedItem.name" placeholder="Enter item name" required />
+      </div>
+  
+      <div>
+        <label for="itemPrice">Price:</label>
+        <input id="itemPrice" type="number" [(ngModel)]="editedItem.price" placeholder="Enter item price" required />
+      </div>
+  
+      <div>
+        <label for="itemLink">Link:</label>
+        <input id="itemLink" [(ngModel)]="editedItem.link" placeholder="Enter item link" required />
+      </div>
+  
+      <div>
+        <label for="itemDescription">Description (Optional):</label>
+        <textarea id="itemDescription" [(ngModel)]="editedItem.description" placeholder="Enter item description"></textarea>
+      </div>
+  
+      <div class="modal-actions">
+        <button (click)="saveChanges()">Save Changes</button>
+        <button (click)="deleteItem()">Delete Item</button>
+        <button (click)="onClose()">Cancel</button>
+      </div>
+    </div>
+  </div>
+  

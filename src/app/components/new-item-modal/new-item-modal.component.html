@@ -1,0 +1,29 @@
+<div class="modal-overlay" (click)="onClose()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <h4>Add New Wishlist Item</h4>
+
+    <div>
+      <label for="itemName">Name:</label>
+      <input id="itemName" [(ngModel)]="newItem.name" placeholder="Enter item name" required />
+    </div>
+
+    <div>
+      <label for="itemLink">Link:</label>
+      <input id="itemLink" [(ngModel)]="newItem.link" placeholder="Enter item link" required />
+    </div>
+
+    <div>
+      <label for="itemDescription">Description (Optional):</label>
+      <textarea id="itemDescription" [(ngModel)]="newItem.description" placeholder="Item Description"></textarea>
+    </div>
+
+    <div>
+      <label for="itemPrice">Price (Optional):</label>
+      <input id="itemPrice" type="number" [(ngModel)]="newItem.price" placeholder="Enter item price" />
+    </div>
+
+    <div class="modal-actions">
+      <button (click)="saveItem()">Save Item</button>
+    </div>
+  </div>
+</div>
