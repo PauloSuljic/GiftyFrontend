@@ -1,0 +1,36 @@
+<div class="friends-page-container">
+    <div class="friends">
+        <p class="title-label">FRIENDS</p>
+        <hr class="divider" />
+        <!-- Search Bar -->
+        <div class="search-container">
+            <span class="search-icon material-icons">search</span>
+            <input 
+                type="text" 
+                placeholder="Search friends..." 
+                [(ngModel)]="searchQuery" 
+                class="search-bar" 
+            />
+        </div>
+    
+        <!-- Friends List -->
+        <div class="friends-list">
+        <div 
+            *ngFor="let friend of filteredFriends(friends)" 
+            class="friend-card" 
+            (click)="navigateToFriend(friend.id)"
+        >
+            <img [src]="friend.image" class="friend-image" />
+            <div class="friend-info">
+            <p class="friend-name">{{ friend.name }}</p>
+            </div>
+        </div>
+        </div>
+    </div>
+  
+    <div class="reminders">
+      <app-reminders></app-reminders>
+      <app-mini-calendar></app-mini-calendar>
+    </div>
+  </div>
+  

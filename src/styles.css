@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    margin: 0;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+    color: white;
+    background: linear-gradient(to right, red, blue);
+}
+  
+input {
+    width: calc(100% - 40px); /* Full width minus padding from the container */
+    padding: 10px; /* Internal padding */
+    margin: 10px 0; /* Space between inputs */
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box; /* Ensure padding is part of the width */
+}
+
+button {
+    margin: 20px 0px 10px 0px;
+    padding: 10px 30px;
+    border: none;
+    border-radius: 5px;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+button:hover {
+    background-color: lightgray;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

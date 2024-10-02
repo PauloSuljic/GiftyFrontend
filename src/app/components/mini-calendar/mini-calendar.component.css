@@ -1,0 +1,25 @@
+.mini-calendar-container {
+  background: rgba(250, 250, 250, 0.85); /* Semi-transparent background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  color: black;
+}
+
+/* Material calendar customization */
+.mat-calendar {
+  width: auto; /* Make calendar take full width of the container */
+  transform: scale(1); /* Slightly scale down the calendar */
+}
+
+/* Birthday date styling */
+.birthday-date {
+  background-color: red;
+  color: white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  line-height: 32px;
+  display: inline-block;
+  text-align: center;
+}

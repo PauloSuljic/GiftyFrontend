@@ -1,0 +1,12 @@
+/* Login box styles */
+.register-container {
+    max-width: 350px; /* Limit maximum width */
+    margin: 50px auto; /* Center horizontally with margin */
+    text-align: center; /* Center content inside the box */
+    color: white;
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; /* Ensure padding is included in width */
+}

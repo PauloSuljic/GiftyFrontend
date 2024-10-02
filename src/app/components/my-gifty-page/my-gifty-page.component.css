@@ -1,0 +1,159 @@
+/* Main container for MyGifty page */
+.my-gifty-page-container {
+    display: flex;
+    justify-content: space-between; /* Ensure space between the two containers */
+    align-items: stretch; /* Make sure both children stretch to the same height */
+}
+
+.wishlist {
+    flex: 3; /* Take up half of the available space */
+    margin: 40px; /* Center horizontally with margin */
+    text-align: center; /* Center content inside the box */
+    color: white; /* Change text color to ensure visibility */
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
+/* Container for wishlists */
+.wishlist-container {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+}
+
+/* Style for each wishlist card */
+.wishlist-card {
+    background: rgba(250, 250, 250, 0.3); /* Semi-transparent background */
+    border: 1px solid #ccc; /* Gray border */
+    border-radius: 8px; /* Rounded corners */
+    padding: 10px; /* Padding inside card */
+    text-align: center; /* Center text */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Card shadow */
+    transition: opacity 0.3s ease; /* Smooth transition */
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center items vertically */
+    align-items: center; /* Center items horizontally */
+    height: 150px; /* Set a fixed height for uniformity */
+    cursor: pointer;
+    position: relative; /* To position the trash icon */
+}
+
+.wishlist-card:hover {
+    background-color: rgba(250, 250, 250, 0.2); /* Hover effect */
+  }
+
+/* Style for the add new wishlist card */
+.add-wishlist {
+    opacity: 0.8; /* Full opacity for the add new wishlist card */
+    cursor: pointer; /* Pointer cursor */
+    border: 1px dashed white; /* Dashed white border */
+    border-radius: 8px; /* Optional: Rounded corners for a softer look */
+    padding: 10px; /* Optional: Add padding for better content spacing */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+/* Hover effect for the add wishlist card */
+.add-wishlist:hover {
+    opacity: 1; /* Full opacity on hover */
+}
+
+/* Style for the material icons */
+.material-icons {
+    font-size: 36px; /* Adjust size of plus icon */
+}
+
+/* Input field styling */
+input[type="text"] {
+    margin-top: 10px; /* Space above input */
+    padding: 5px; /* Padding inside input */
+    border: 1px solid #ccc; /* Border color */
+    border-radius: 4px; /* Rounded corners */
+    width: 80%; /* Width of the input field */
+    display: inline-block; /* Keep input inline */
+}
+
+/* Input field styling for the Add New Wishlist card */
+.add-wishlist input[type="text"] {
+    margin-top: 10px; /* Space above the input */
+    padding: 8px; /* Padding inside the input for better usability */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 4px; /* Rounded corners */
+    width: 80%; /* Width of the input field */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: border-color 0.3s ease; /* Smooth transition for border color */
+}
+
+/* Change border color on focus */
+.add-wishlist input[type="text"]:focus {
+    border-color: #007bff; /* Change to a blue color on focus */
+    outline: none; /* Remove default outline */
+}
+
+/* Add some styling for placeholder text */
+.add-wishlist input[type="text"]::placeholder {
+    color: #999; /* Gray color for placeholder text */
+    font-style: italic; /* Italic style for placeholder text */
+}
+
+
+/* Reminders container */
+.reminders {
+    flex: 1; /* Take up a smaller portion of the available space */
+    display: flex; /* Use flexbox for inner layout */
+    flex-direction: column; /* Stack reminders and calendar vertically */
+    padding: 20px; /* Add some padding */
+}
+
+/* Flex properties for app components */
+.app-reminders {
+    flex: 1; /* Take up available space for reminders */
+}
+
+.app-mini-calendar {
+    flex: 1; /* Take up available space for calendar */
+}
+
+/* Optional: Hide if adding new wishlist is not possible */
+.inactive {
+    display: none; /* Hide if needed */
+}
+
+/* Style for the gift icon */
+.gift-icon {
+    font-size: 36px; /* Adjust size of the gift icon */
+    display: block; /* Make the icon a block element */
+    margin: 0 auto 10px; /* Center the icon and add some bottom margin */
+}
+
+/* User Info Section */
+.user-info {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 10px; /* Space below user info */
+}
+
+.user-image {
+    width: 50px; /* Set the size of the profile image */
+    height: 50px; /* Set the size of the profile image */
+    border-radius: 50%; /* Make it circular */
+    margin-right: 10px; /* Space between image and text */
+}
+
+.user-details p {
+    font-size: 18px; /* Adjust font size */
+    font-weight: bold; /* Make it bold */
+    color: #333; /* Dark text color */
+    padding-top: 10px;
+}
+
+/* Divider line */
+.divider {
+    border: 0; /* Remove default border */
+    border-top: 1px solid #ccc; /* Add thin top border */
+    margin: 10px 0; /* Space around the line */
+    opacity: 0.8;
+}

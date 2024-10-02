@@ -1,15 +1,32 @@
-import { Routes } from '@angular/router';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { ForgotPasswordComponent } from './components/forgot-password/forgot-password.component';
 import { AboutComponent } from './components/about/about.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
+import { HomeComponent } from './components/home/home.component';
+import { AuthGuard } from './services/auth.guard';
+import { MyGiftyPageComponent } from './components/my-gifty-page/my-gifty-page.component';
+import { FriendsPageComponent } from './components/friends-page/friends-page.component';
+import { CalendarPageComponent } from './components/calendar-page/calendar-page.component';
+import { WishlistPageComponent } from './components/wishlist-page/wishlist-page.component';
 
 export const routes: Routes = [
-  { path: '', redirectTo: '/login', pathMatch: 'full' }, // Redirect to login if no path
   { path: 'login', component: LoginComponent }, 
   { path: 'register', component: RegisterComponent },
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'dashboard', component: DashboardComponent },
+  { path: 'my-gifty', component: MyGiftyPageComponent, canActivate: [AuthGuard] },
+  { path: 'wishlists/:id', component: WishlistPageComponent, canActivate: [AuthGuard] },
+  { path: 'friends', component: FriendsPageComponent, canActivate: [AuthGuard] },
+  { path: 'calendar', component: CalendarPageComponent, canActivate: [AuthGuard] },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: '**', redirectTo: 'home' }
 ];
+
+@NgModule({
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }

@@ -1,0 +1,15 @@
+/* Example styles for individual blocks */
+.friends-container {
+    margin: 20px auto; /* Center horizontally with margin */
+    text-align: center; /* Center content inside the box */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; /* Ensure padding is included in width */
+    cursor: pointer;
+}
+
+h3 {
+    font-size: 24px;
+}

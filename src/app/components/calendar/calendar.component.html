@@ -1,6 +1,4 @@
-<h3>Your Friends' Birthdays</h3>
-<ul>
-  <li *ngFor="let friend of friendsBirthdays">
-    {{ friend.name }} - {{ friend.date }}
-  </li>
-</ul>
+<div class="calendar-container" (click)="navigateToCalendar()">
+    <img src="../../../assets/icons/calendar-icon.png" alt="Calendar Icon">
+    <h3>CALENDAR</h3>
+</div>

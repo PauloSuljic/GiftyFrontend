@@ -1,0 +1,14 @@
+.mini-dashboard-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    background: rgba(0, 0, 0, 0.3); /* Semi-transparent background */
+    gap: 10px; /* Space between blocks */
+    margin: 20px auto; /* Center horizontally with margin */
+    text-align: center; /* Center content inside the box */
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; /* Ensure padding is included in width */
+}
+
